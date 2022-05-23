@@ -1,0 +1,226 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+  .responsive {
+  width: 100%;
+  height: auto;
+}
+  /* Add a gray background color with some padding */
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+
+  .rspnsv {
+    width: 50%;
+    height: auto;
+  }
+
+  video {
+    width: 50%;
+    height: auto;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+
+
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+
+  
+  /* Add a card effect for articles */
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+h1,
+h2,
+h3,
+h4,
+nav {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav p.menuknop {
+  background-color: white;
+ /* background-image: url(afbeeldingen-templates/taxi.svg);*/
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1;
+  margin: 0;
+  padding: 1em 0.2em 0.1em 0;
+  text-align: right;
+}
+
+nav p.menuknop a {
+  color: black;
+}
+
+nav ul {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  border-top: 1px solid dimgrey;
+  padding: 0.7em 0.4em 0.6em 0.4em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: rgb(17, 70, 81);
+}
+
+nav ul li.submenu {
+  position: relative;
+}
+
+nav ul li.submenu > a:after {
+  content: " \025BE";
+  color: orange;
+}
+
+nav ul li.submenu:hover ul {
+  box-sizing: border-box;
+  background-color: rgb(17, 70, 81);
+  display: block;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+}
+
+nav li li:first-child {
+  border-top: none;
+}
+
+nav li li a:hover {
+  color: lightgray;
+}
+
+@media screen and (min-width: 550px) {
+
+  nav {
+    background-color: white !important;
+  }
+
+  nav a {
+    color: black;
+  }
+
+  nav p.menuknop {
+    position: absolute;
+    background-position: left 2px;
+  }
+
+  nav p.menuknop a {
+    visibility: hidden;
+  }
+
+  nav > ul {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-pack: distribute;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+  }
+
+  nav ul li:hover {
+    background-color: rgba(33, 129, 148, 0.95);
+  }
+
+  nav ul li.submenu:hover ul {
+    background-color: #218194f2;
+    width: 8em;
+    left: 0;
+    top: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-top: 1px solid darkgrey;
+  }
+
+  nav > ul > li {
+    border-top: none;
+  }
+}
